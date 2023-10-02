@@ -15,7 +15,7 @@
 
 mod test_cmd_util;
 
-#[cfg(test)]
+#[cfg(all(test,feature = "vmrest"))]
 mod test_vmrest {
     use crate::test_cmd_util;
     use hvctrl::{types::VmCmd, vmware::VmRest};

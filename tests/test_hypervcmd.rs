@@ -10,7 +10,7 @@
 //! ```
 
 mod test_cmd_util;
-#[cfg(test)]
+#[cfg(all(test,feature = "hypervcmd"))]
 mod test_hypervcmd {
     use crate::test_cmd_util;
     use hvctrl::{

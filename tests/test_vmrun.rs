@@ -15,7 +15,7 @@
 
 mod test_cmd_util;
 
-#[cfg(test)]
+#[cfg(all(test,feature = "vmrun"))]
 mod test_vmrun {
     use crate::test_cmd_util;
     use hvctrl::vmware::VmRun;
