@@ -14,7 +14,7 @@
 
 mod test_cmd_util;
 
-#[cfg(test)]
+#[all(cfg(test),cfg(feature = "vboxmanage")]
 mod test_vboxmanage {
     use crate::test_cmd_util;
     use hvctrl::{types::ErrorKind::FileError, virtualbox::VBoxManage};
